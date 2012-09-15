@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Treemap</title>
+<link rel="stylesheet" href="treemap.css">
+<style type="text/css">
+
+/* You could have different backgrounds... */
+#healthcare,
+#pensions,
+#welfare,
+#other,
+#defence,
+#interest,
+#education,
+#protection,
+#gen_gov,
+#transport {
+  background: #fff;
+}
+
+</style>
+
+<script>
+TMAP_CONFIG = {
+  // PESA 2010, table 5.2, 2008-09 outturn central gov figures:
+  data: {
+    healthcare: {title: "Health Care", millions: 119800, parts: {
+      healthcare_med: {title: "Medical service",        millions: 116300},
+      healthcare_pub: {title: "Public health services", millions:   2200},
+      healthcare_rnd: {title: "R&D Health",             millions:    900},
+      healthcare_nec: {title: "Health",          millions:    300}
+    }},
+    pensions:   {title: "Pensions", millions: 117191, parts: {
+      pensions_old: {title: "Old age",                  millions: 81900},
+      pensions_sic: {title: "Sickness and disability",  millions: 33500},
+      pensions_sur: {title: "Survivors",                millions:  1800}
+    }},
+    welfare:    {title: "Welfare", millions: 109100, parts: {
+      welfare_pro: {title: "Social protection",  millions: 51500},
+      welfare_exc: {title: "Social exclusion",   millions: 23900},
+      welfare_fam: {title: "Family and children",       millions: 22200},
+      welfare_une: {title: "Unemployment",              millions:  7000},
+      welfare_hou: {title: "Housing",                   millions:  4500}
+    }},
+    education:  {title: "Education", millions:  85600, parts: {
+      education_1: {title: "Education not definable by level",  millions: 56200},
+      education_2: {title: "Secondary education",   millions: 14400},
+      education_3: {title: "Tertiary education",       millions: 12900},
+      education_4: {title: "Subsidiary<br>services to<br>education",  millions:  1400},
+      education_5: {title: "Pre-primary<br>and primary<br>education", millions:  700}
+    }},
+    other:      {title: "Other", millions:  84100, parts: {
+      other_1: {title: "Other Spending",  millions: 25300},
+      other_2: {title: "General economic,<br>commercial and<br>labour affairs", millions: 10000},
+      other_3: {title: "Waste<br>management",       millions: 8400},
+      other_4: {title: "Recreational and<br>sporting service",              millions:  8000},
+      other_5: {title: "Agriculture, forestry,<br>fishing and hunting",         millions:  5900},
+      other_6: {title: "Housing<br>development",                   millions:  5300},
+      other_7: {title: "Housing and<br>community amenities",                   millions:  4700},
+      other_8: {title: "Broadcasting<br>and publishing",                   millions:  3800},
+      other_9: {title: "R&D economic<br>affairs",                   millions:  3500},
+      other_10: {title: "Cultural<br>services",                   millions:  2100},
+      other_11: {title: "Fuel and<br>energy",                   millions:  1800},
+      other_12: {title: "Economic affairs",                   millions:  1200},
+      other_13: {title: "Water supply",                   millions:  1000},
+      other_14: {title: "Community<br>development",                   millions:  800},
+      other_15: {title: "Pollution<br>abatement",                   millions:  400},
+      other_16: {title: "Protection of<br>biodiversity",                   millions:  400},
+      other_17: {title: "R&D Environmental<br>protection",                  millions:  400},
+      other_18: {title: "Mining,<br>manufacturing<br>and construction",           millions:  400},
+      other_19: {title: "Communication",                   millions:  300},
+      other_20: {title: "R&D Recreation,<br>culture and religion",                 millions:  200},
+      other_21: {title: "Basic<br>research",                   millions:  100},
+      other_22: {title: "Other<br>industries",                   millions:  100}
+    }},
+    defence:    {title: "Defence",          millions:  43785, parts: {
+      defence_1: {title: "Military defence",  millions: 31800},
+      defence_2: {title: "Foreign economic aid", millions: 5600},
+      defence_3: {title: "Foreign military aid", millions: 4100},
+      defence_4: {title: "Defence",              millions:  1900},
+      defence_5: {title: "R&D Defence",          millions:  500}
+    }},
+    interest:   {title: "Debt<br>Interest", millions:  30948},
+    protection: {title: "Protection",       millions:  34700, parts: {
+      protection_1: {title: "Public order and safety", millions: 18200},
+      protection_2: {title: "Law courts",   millions: 6900},
+      protection_3: {title: "Police services",       millions: 5000},
+      protection_4: {title: "Prisons",       millions: 4600}
+    }},
+    gen_gov:    {title: "General<br>Gov.",  millions:  24700, parts: {
+      gen_gov_1: {title: "General services",   millions: 14800},
+      gen_gov_2: {title: "Executive and legislative organs", millions: 9400},
+      gen_gov_3: {title: "General public services",       millions: 500}
+    }},
+    transport:  {title: "Transport", millions:  12062}
+  },
+  value: 7000
+};
+
+</script>
+
+<script src="http://yui.yahooapis.com/3.6.0/build/yui/yui-min.js"></script>
+<script src="treemap.js"></script>

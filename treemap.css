@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #fff;
+}
+
+#close {
+  position: absolute;
+  right: 16px;
+  font-size: 3em;
+  z-index: 100;
+  display: none;
+  text-align: center;
+}
+
+div.strip {
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+div.container.absolute {
+  position: absolute;
+  top: 0;  
+  border-left-style: solid;
+  border-width: 1px;
+}
+
+div.container.absolute:hover > .inner > .title_text,
+#close:hover {
+  color: #f00;  
+}
+
+/* strip in a container */
+div.container div.strip {
+  opacity: 0.1; 
+}
+
+/* ie-only madness ("filter" does not propagate like "opacity") */
+div.container div.strip div.inner,
+div.container div.strip div.inner div.title_text {
+  filter: alpha(opacity=10);
+}
+
+div.container.absolute > div.inner {  
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+div.container.relative > div.inner {  
+  position: relative;
+  height: 100%;
+}
+
+div.inner { 
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-width: 1px;
+  text-align: center;
+}
+
+div.title_text {
+  font-size: 0;
+  position: absolute;
+}
