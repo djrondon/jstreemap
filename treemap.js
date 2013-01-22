@@ -252,7 +252,7 @@ YUI().use('node', 'anim', 'selector-css3', 'event', 'datatype-number', function 
     },
 
     formatNum: function (str) {
-      return Y.DataType.Number.format(str, {
+      return Y.Number.format(str, {
         prefix: "£",
         thousandsSeparator: ",",
         decimalPlaces: 2
